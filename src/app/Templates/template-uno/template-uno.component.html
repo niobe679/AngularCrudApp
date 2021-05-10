@@ -1,0 +1,118 @@
+<div fxLayout="column" fxFill class="parent" xLayoutAlign="space-between center">
+
+    <div class="nav">
+
+    </div>
+    <div fxLayout="row" fxFill fxLayoutAlign="space-between center">
+        <div fxLayout="column" class="reg" fxFlex="50" fxLayoutAlign="center center">
+            <div fxFill fxLayoutAlign="center center">
+                <div fxLayout="row" fxLayoutAlign="space-between center"> 
+               
+               <!-- <button fxLayoutAlign="end center" routerLink="employee/register/0">Add Employee?</button> -->
+            </div>
+               <form (ngSubmit)="Register(f); f.resetForm()" #f="ngForm" >
+                   <div class="form-group" fxLayout="column">
+                    <label>Id</label>
+                    <input type="text" class="form-control" [ngModel]="employee.id" name="id">
+                   </div>
+                   <div class="form-group" fxLayout="column">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" [ngModel]="employee.Firstname" name="Firstname">
+                   </div>
+                   <div class="form-group" fxLayout="column">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" [ngModel]="employee.Lastname" name="Lastname">
+                   </div>
+                   <div class="form-group" fxLayout="column">
+                    <label>Age</label>
+                    <input type="text" class="form-control" [ngModel]="employee.age" name="age">
+                   </div>
+                   <div class="form-group" >
+                    <button type="submit">Save</button>
+                   </div>
+               </form>
+            </div>
+            
+        </div>
+        <div fxLayout="column"class="list" fxFlex="50">
+            <!-- <div fxFill>
+    <h2>Employees</h2>
+<table>
+    <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>
+                {{employee.Firstname}}
+            </td>
+            <td>
+                {{employee.Lastname}}
+            </td>
+            <td>
+                {{employee.age}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div> -->
+<div fxLayout="column" fxLayoutAlign="space-between">
+    <h2 fxLayoutAlign="center center">Employees</h2>
+    <div fxLayout="row">
+        <div fxFlex=""fxLayoutAlign="center center" >
+            Id
+        </div>
+        <div fxFlex=""fxLayoutAlign="center center" >
+            First Name
+        </div>
+        <div fxFlex="" fxLayoutAlign="center center">
+            Last Name
+        </div>
+        <div fxFlex="" fxLayoutAlign="center center">
+            Age
+        </div>
+        <div fxFlex="" fxLayoutAlign="center center">
+            
+        </div>
+        <div fxFlex="" fxLayoutAlign="center center">
+            
+        </div>
+    </div>
+    <div fxLayout="row">
+        <div fxFlex="50" fxLayoutAlign="center center">
+            &nbsp;
+        </div>
+        <div fxFlex="50"fxLayoutAlign="center center">
+            &nbsp;
+        </div>
+        <div fxFlex="50"fxLayoutAlign="center center">
+            &nbsp;
+        </div>
+    </div>
+    <div fxLayout="row" *ngFor="let employee of employees">
+        <div fxFlex="50" fxLayoutAlign="center center">
+            {{employee.id}}
+        </div>
+        <div fxFlex="50" fxLayoutAlign="center center">
+            {{employee.Firstname}}
+        </div>
+        <div fxFlex="50"fxLayoutAlign="center center">
+            {{employee.Lastname}}
+        </div>
+        <div fxFlex="50"fxLayoutAlign="center center">
+            {{employee.age}}
+        </div>
+        <div fxFlex="50"fxLayoutAlign="center center">
+            <button (click)="Edit(employee.id)">Edit</button>
+        </div>
+        <div fxFlex="50"fxLayoutAlign="center center">
+            <button (click)="Delete(employee.id)">Delete</button>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+
+</div>

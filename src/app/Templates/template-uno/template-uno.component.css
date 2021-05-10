@@ -1,0 +1,16 @@
+.reg{
+    background-color: aqua;
+    height: 400px;
+}
+.list{
+    background-color: bisque;
+    height: 400px;
+}
+.parent {height: 100px;}
+.nav {
+    height: 50px;
+    background-color: brown;
+}
+.form-control{
+    width: 300px;
+}
